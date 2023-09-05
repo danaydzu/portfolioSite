@@ -1,0 +1,132 @@
+.gallery {
+    margin-top: $gap;
+    padding-bottom: $gap;
+    display: flex;
+    width: 100%;
+   
+
+
+    &__container {
+        display: flex;
+        width:70%;
+        margin: 0 auto;
+        justify-content: space-between;
+        @include tablet(768px){
+            
+            width: 90%;
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+    }
+
+    @include tablet(1024px) {
+        max-width: 1036px;
+        width: 100%;
+
+    }
+    
+
+    &__container>* {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+    }
+
+    &__image {
+        
+       
+        width: 60%;
+        border-radius: 8px;
+
+        @include tablet(768px) {
+            border-radius: 12px;
+        }
+
+        &-right{
+            margin-top: $gap;
+           
+        }
+        &-left{
+            margin-bottom: $gap;
+    
+
+            &--margin{
+                // align-self: end;
+                // margin-left: 0;
+                // margin-right: -5vw;
+                align-self: center;
+            }
+        }
+    }
+
+    &__right{
+        
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        &_gap{
+            align-self: end;
+            @include tablet(768px){ align-self: center;}
+        }
+        @include tablet(768px){
+            margin-bottom: $gap;
+            align-items: center;
+           
+        }
+
+        &-wrap{
+            &--margin{
+                margin-top: $gap;
+            }    
+            
+        }
+        
+       
+
+    }
+    &__left{
+        
+        position: relative;
+        align-items: start;
+   
+        @include tablet(768px){
+            align-items: center;
+        }
+        &-wrap{
+            margin-bottom: $gap;
+            align-self: center;
+            padding-right: 0;
+            &_start{
+                align-self: start;
+            }
+        }
+    }
+    &__wrap{
+        
+        
+        width: 60%;
+
+    }
+    &__heading{
+        color: hsl(0, 0%, 88%);
+        font-family: outfit-c;
+        text-shadow: 0 9px 4px  #131313c7, 0 -2px 1px #0f0f0fc5;
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+        font-size: 3vw;
+        
+    }
+    &__text{
+        font-family: outfit-c;
+        text-shadow: 0 3px 2px  #131313c7, 0 -2px 1px #0f0f0fc5;
+        font-size: 1.8vw;
+        margin: 0;
+        text-align: justify;
+        color:hsl(0, 0%, 63%);
+    }
+
+
+}

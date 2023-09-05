@@ -1,0 +1,121 @@
+.header {
+    overflow-x: hidden;
+    display: flex;
+
+    &__image {
+        border-radius: 8px;
+        width: 40%;
+        // position: absolute;
+        border-radius: 8px;
+
+        // left: calc(70% - 25vw;
+        // top: calc(50% - 39vmin);
+        @include tablet(768px) {
+            width: 100%;
+            border-radius: 16px;
+        }
+
+
+    }
+
+    &-main {
+        
+        box-sizing: border-box;
+        height: 100vh;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+
+
+        width: 70%;
+        justify-content: space-between;
+
+        @include tablet(1024px) {
+            max-width: 716px;
+            width: 100%;
+        }
+
+        @include tablet(768px) {
+            height: auto;
+            width: 100%;
+            max-width: none;
+            padding: 10vw;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+    }
+    &-wrapper{
+        width: min-content;
+        
+    }
+    &-text_tablet{
+        @include desktop(768px){
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            border: 0;
+            padding: 0;
+            white-space: nowrap;
+            clip-path: inset(100%);
+            clip: rect(0 0 0 0);
+            overflow: hidden;
+        }
+        text-align: center;
+        font-size: 4vw;
+        align-self: end;
+        text-shadow: 0 6px 3px  #131313c7, 0 -2px 1px #0f0f0fc5;
+        margin-top: 3vh;color:hsl(0, 0%, 63%);
+
+    }
+    &-text{
+        font-size: 1.3vw;
+        align-self: end;
+        text-shadow: 0 6px 3px  #131313c7, 0 -2px 1px #0f0f0fc5;
+        text-align:justify;
+        line-height: 1.5;
+        padding:0 0 0 3vw;color:hsl(0, 0%, 63%);
+        @include tablet(1024px) {
+            font-size: 13.3px;
+        }
+        @include tablet(768px){
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            border: 0;
+            padding: 0;
+            white-space: nowrap;
+            clip-path: inset(100%);
+            clip: rect(0 0 0 0);
+            overflow: hidden;
+        }
+ 
+
+    }
+
+    &-title {
+        margin: 0 0 15% 0;
+        color: hsl(0, 0%, 88%);
+        @include tablet(1024px) {
+            font-size: 81px;
+        }
+
+        @include tablet(768px) {
+            margin: 0 0 3vh 0;
+            width: max-content;
+            text-align: start;
+            font-size: 8vw;
+        }
+
+        // position: absolute;
+        font-size: 8vw;
+        width: min-content;
+        // top: calc(50vh - calc(calc(1vh + 1vw)*13));
+        // left: calc(15% - 4vw);
+
+        text-shadow: 0 13.36px 8.896px #131313c7,
+        0 -2px 1px #0f0f0fc5;
+    }
+}

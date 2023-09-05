@@ -1,0 +1,38 @@
+$index: calc(1vw + 1vh);
+$gap: 10vmin;
+
+.visual-hidden{
+    visibility:hidden;
+}
+@font-face {
+    font-family: raleway-с;
+    src: url(../fonts/raleway-regular.woff2);
+}
+
+@font-face {
+    font-family: outfit-c;
+    src: url(../fonts/outfit-regular.woff2);
+}
+.content, .header-main,.gallery__left,.gallery__right{
+    will-change: transform;
+}
+
+body{
+    box-sizing: border-box;
+    font-family: raleway-с;
+    color: #fafafa;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../img/bg.jpg);
+    background-size: 50px;
+    overflow-x: hidden;
+
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: raleway-с;
+}
+.container{
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+}
